@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import Dict, List
 
 
 def get_full_name(first_name: str, last_name: str) -> str:
