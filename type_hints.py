@@ -34,3 +34,20 @@ print(get_name_with_age("jane doe", 30))
 print(get_names_with_ages(["jane", "john"], [30, 40]))
 print(process_items([1, 2, 3]))
 print(process_food_prices({"apple": 1.0, "banana": 2.0}))
+
+
+# Classes as types
+class Person:
+    def __init__(self, name: str):
+        self.name = name
+
+    # def get_name(self) -> str:
+    #     return self.name
+
+
+def get_person_name(person: Person) -> str:
+    return person.name
+
+
+louis = Person("louis")
+print(get_person_name(louis))
