@@ -37,9 +37,9 @@ external_data = {
 }
 
 user = User(**external_data)
-print(user)
-print(user.dict())
+# print(user)
+# print(user.dict())
 print(user.json())
-print(user.id)
-print(user.name)
-print(user.email)
+# print(user.id)
+# print(user.name)
+# print(user.email)
