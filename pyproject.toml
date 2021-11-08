@@ -8,6 +8,7 @@ authors = ["Louis Agyapong <agyapong.louis@gmail.com>"]
 python = "^3.10"
 ipython = "^7.28.0"
 pydantic = "^1.8.2"
+mypy = "^0.910"
 
 [tool.poetry.dev-dependencies]
 black = {version = "^21.9b0", allow-prereleases = true}
