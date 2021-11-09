@@ -2,7 +2,7 @@
 
 
 class Employee:
-    def __init__(self, first, last) -> None:
+    def __init__(self, first: str, last: str) -> None:
         self.first = first
         self.last = last
 
@@ -14,7 +14,7 @@ class Employee:
         return f"{self.first} {self.last}"
 
     @fullname.setter
-    def fullname(self, name) -> None:
+    def fullname(self, name: str) -> None:
         first, last = name.split(" ")
         self.first = first
         self.last = last
@@ -27,7 +27,7 @@ class Employee:
 
     @property
     def email(self):
-        return f"{self.first}.{self.last}@company.com"
+        return f"{self.first.lower()}.{self.last.lower()}@company.com"
 
 
 emp_1 = Employee("Louis", "Agyapong")
