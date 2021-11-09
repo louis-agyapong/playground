@@ -1,3 +1,6 @@
+import datetime
+
+
 class Employee:
     num_of_employees = 0
     raise_amount: float = 1.04
@@ -47,7 +50,6 @@ emp_str_1 = "John-Doe-70000"
 new_emp_1 = Employee.from_string(emp_str_1)
 print(new_emp_1.email, new_emp_1.pay)
 
-import datetime
 
 my_date = datetime.date(2020, 7, 21)
 print(Employee.is_work_day(my_date))
