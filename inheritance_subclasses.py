@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Employee:
     num_of_employees = 0
     raise_amount: float = 1.04
@@ -45,9 +48,12 @@ class Developer(Employee):
 
 
 class Manager(Employee):
-    def __init__(self, first: str, last: str, pay: int, employees: list) -> None:
+    def __init__(self, first: str, last: str, pay: int, employees=None) -> None:
         super().__init__(first, last, pay)
-        self.employees = employees
+        if employees is None:
+            self.employees = []
+        else:
+            self.employees = employees
 
     def add_emp(self, emp: Employee) -> None:
         if emp not in self.employees:
@@ -64,6 +70,27 @@ class Manager(Employee):
 
 dev_1 = Developer("Teddy", "Agudogo", 10000, "Python")
 dev_2 = Developer("Louis", "A", 20000, "Java")
+dev_3 = Developer("Teddy", "B", 30000, "C++")
+dev_4 = Developer("Zion", "C", 40000, "C#")
+dev_5 = Developer("Adepa", "A", 50000, "JavaScript")
+
+mgr_1 = Manager("Sue", "Smith", 90000, [dev_1])
+print(mgr_1.email)
+mgr_1.add_emp(dev_2)
+mgr_1.add_emp(dev_3)
+mgr_1.add_emp(dev_4)
+mgr_1.add_emp(dev_5)
+mgr_1.remove_emp(dev_3)
+# mgr_1.print_emp()
+
+print(isinstance(mgr_1, Manager))
+print(isinstance(mgr_1, Employee))
+print(isinstance(mgr_1, Developer))
+print(issubclass(Manager, Employee))
+print(issubclass(Developer, Employee))
+print(issubclass(Manager, Developer))
+# mgr_1.add_emp(dev_2)
+# mgr_1.print_emp()
 
 # dev_1.set_raise_amount(1.06)
 
