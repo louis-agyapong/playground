@@ -1,6 +1,3 @@
-from typing import List
-
-
 class Employee:
     num_of_employees = 0
     raise_amount: float = 1.04
