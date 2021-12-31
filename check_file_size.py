@@ -12,4 +12,3 @@ except OSError:
 print(f"File size: {size} bytes")
 
 print(os.stat(path).st_size)
-
