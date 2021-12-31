@@ -1,7 +1,7 @@
 import os
 import sys
 
-path = "docs/xample.txt"
+path = "docs/example.txt"
 
 try:
     size = os.path.getsize(path)
@@ -10,3 +10,6 @@ except OSError:
     sys.exit()
 
 print(f"File size: {size} bytes")
+
+print(os.stat(path).st_size)
+
