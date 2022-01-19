@@ -13,12 +13,17 @@ def doubled_odds(numbers: list) -> list:
     return doubled_odd_numbers
 
 
-def doubled_odds_v2(numbers: list) -> list:
-    """
-    Given a list of numbers, return a list where
-    all odd numbers are doubled (HINT: use filter, odd?)
-    """
-    return list(filter(lambda x: x % 2 != 0, map(lambda x: x * 2, numbers)))
+"""
+List Comprehension
+"""
+doubled_odds_v2 = [n * 2 for n in numbers if n % 2 != 0]
+
+print(doubled_odds_v2)
 
 
-print(doubled_odds_v2(numbers))
+# def doubled_odds_v3(numbers: list) -> list:
+#     """
+#     Given a list of numbers, return a list where
+#     all odd numbers are doubled (HINT: use filter, odd?)
+#     """
+#     return list(filter(lambda x: x % 2 != 0, map(lambda x: x * 2, numbers)))
