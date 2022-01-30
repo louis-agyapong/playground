@@ -50,6 +50,7 @@ class Dachshund(Dog):
 jack = Dachshund("Jack", 2)
 print(jack.species)
 print(type(jack))
+print(isinstance(jack, Dog))
 
 
 class Bulldog(Dog):
