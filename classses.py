@@ -7,9 +7,12 @@ class Dog:
         self.name = name
         self.age = age
 
+    # instance method
+    def description(self) -> str:
+        return f"{self.name} is {self.age} years old"
+
 
 buddy = Dog("Buddy", 6)
 miles = Dog("Miles", 4)
 
-print(buddy.name)
-print(miles.name)
+print(buddy.description())
