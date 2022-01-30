@@ -25,3 +25,19 @@ miles = Dog("Miles", 4)
 print(buddy.description())
 print(buddy.speak("Woof!"))
 print(miles)
+
+
+class Car:
+    def __init__(self, color, mileage) -> None:
+        self.color = color
+        self.mileage = mileage
+
+    def __str__(self) -> str:
+        return f"The {self.color} car has {self.mileage:,} miles."
+
+
+blue_car = Car("blue", 20_000)
+red_car = Car("red", 30_000)
+
+print(blue_car)
+print(red_car)
