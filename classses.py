@@ -41,3 +41,16 @@ red_car = Car("red", 30_000)
 
 print(blue_car)
 print(red_car)
+
+
+class Dachshund(Dog):
+    pass
+
+
+jack = Dachshund("Jack", 2)
+print(jack.species)
+print(type(jack))
+
+
+class Bulldog(Dog):
+    pass
