@@ -21,9 +21,12 @@ doubled_odds_v2 = [n * 2 for n in numbers if n % 2 != 0]
 print(doubled_odds_v2)
 
 
-# def doubled_odds_v3(numbers: list) -> list:
-#     """
-#     Given a list of numbers, return a list where
-#     all odd numbers are doubled (HINT: use filter, odd?)
-#     """
-#     return list(filter(lambda x: x % 2 != 0, map(lambda x: x * 2, numbers)))
+def doubled_odds_v3(numbers: list) -> list:
+    """
+    Given a list of numbers, return a list where
+    all odd numbers are doubled (HINT: use filter, odd?)
+    """
+    return list(filter(lambda x: x % 2 != 0, map(lambda x: x * 2, numbers)))
+
+
+print(doubled_odds_v3(numbers))
