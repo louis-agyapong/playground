@@ -13,7 +13,7 @@ class Dog:
 
     # instance method
     def speak(self, sound: str) -> str:
-        return f"{self.name} says {sound}"
+        return f"{self.name} barks: {sound}"
 
     def __str__(self) -> str:
         return f"{self.name} is {self.age} years old"
@@ -54,4 +54,13 @@ print(isinstance(jack, Dog))
 
 
 class Bulldog(Dog):
-    pass
+    def speak(self, sound="Arf") -> str:
+        return super().speak(sound)
+
+
+bull_dog = Bulldog("Bully", 3)
+print(bull_dog.speak())
+print(bull_dog.speak("Bow Wow"))
+
+jim = Dog("Jim", 4)
+print(jim.speak("woof"))
