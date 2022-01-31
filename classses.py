@@ -13,7 +13,7 @@ class Dog:
 
     # instance method
     def speak(self, sound: str) -> str:
-        return f"{self.name} barks: {sound}"
+        return f"{self.name} says {sound}"
 
     def __str__(self) -> str:
         return f"{self.name} is {self.age} years old"
@@ -64,3 +64,17 @@ print(bull_dog.speak("Bow Wow"))
 
 jim = Dog("Jim", 4)
 print(jim.speak("woof"))
+
+""""
+Create a GoldenRetriever class that inherits from the Dog class.
+Give the sound argument of GoldenRetriever.speak() a default value of "Bark".  
+"""
+
+
+class GoldenRetriever(Dog):
+    def speak(self, sound="Bark") -> str:
+        return super().speak(sound)
+
+
+golden_dog = GoldenRetriever("Goldy", 4)
+print(golden_dog.speak())
