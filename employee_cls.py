@@ -5,12 +5,15 @@ class Employee:
         self.pay = pay
         self.email = f"{first}.{last}@company.com"
 
+    def fullname(self) -> str:
+        return f"{self.first.title()} {self.last.title()}"
 
-emp_1 = Employee("Louis", "Agypaong", 50000)
-emp_2 = Employee("Nana", "Kyei", 60000)
+
+emp_1 = Employee("louis", "agyapong", 50000)
+emp_2 = Employee("nana", "kyei", 60000)
 
 print(emp_1)
 print(emp_2)
 
-print(emp_1.email)
-print(emp_2.email)
+print(emp_1.fullname())
+print(emp_2.fullname())
