@@ -17,9 +17,17 @@ class Employee:
     def apply_raise(self) -> None:
         self.pay = int(self.pay * self.raise_amount)
 
+    @classmethod
+    def set_raise_amount(cls, amount: float) -> None:
+        cls.raise_amount = amount
+
 
 emp_1 = Employee("louis", "agyapong", 50000)
 emp_2 = Employee("nana", "kyei", 60000)
 
+Employee.set_raise_amount(1.05)
+
 # print(emp_1.__dict__)
-print(Employee.num_of_emplyees)
+print(Employee.raise_amount)
+print(emp_1.raise_amount)
+print(emp_2.raise_amount)
