@@ -21,13 +21,22 @@ class Employee:
     def set_raise_amount(cls, amount: float) -> None:
         cls.raise_amount = amount
 
+    @classmethod
+    def from_string(cls, emp_str: str) -> "Employee":
+        first, last, pay = emp_str.split("-")
+        return cls(first, last, pay)
+
 
 emp_1 = Employee("louis", "agyapong", 50000)
 emp_2 = Employee("nana", "kyei", 60000)
 
-Employee.set_raise_amount(1.05)
+emp_str_1 = "John-Doe-70000"
+emp_str_2 = "Steve-Smith-30000"
+emp_str_3 = "Jane-Doe-90000"
+emp_str_4 = "Kenny-Smith-17000"
 
-# print(emp_1.__dict__)
-print(Employee.raise_amount)
-print(emp_1.raise_amount)
-print(emp_2.raise_amount)
+
+new_emp_1 = Employee.from_string(emp_str_1)
+
+print(new_emp_1.email)
+print(new_emp_1.pay)
