@@ -8,5 +8,17 @@ class Pizza:
     def __repr__(self) -> str:
         return self.ingredients
 
+    @classmethod
+    def margharita(cls):
+        return cls(["cheese", "tomaotes"])
 
-print(Pizza(["cheese", "tomato"]))
+    @classmethod
+    def prosciutto(cls):
+        return cls(["cheese", "tomatoes", "ham", "mushrooms"])
+
+
+marg = Pizza.margharita()
+pros = Pizza.prosciutto()
+
+print(marg)
+print(pros)
