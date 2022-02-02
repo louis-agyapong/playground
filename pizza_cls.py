@@ -27,7 +27,8 @@ class Pizza:
     def area(self) -> float:
         return self._circle_area(self.radius)
 
-    def _circle_area(self, radius: float) -> float:
+    @staticmethod
+    def _circle_area(radius: float) -> float:
         return math.pi * radius ** 2
 
 
