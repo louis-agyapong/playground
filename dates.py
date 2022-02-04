@@ -10,9 +10,9 @@ How many days until my birthday
 """
 birth_day = datetime.date(1990, 10, 18)
 
-days_until_birthday = today - birth_day
+till_birthday = today - birth_day
 
-print(days_until_birthday)
+print(till_birthday)
 
 print(one_week_ago)
 print(next_week)
