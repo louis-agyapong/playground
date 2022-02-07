@@ -15,4 +15,5 @@ class InventoryItem:
 if __name__ == "__main__":
     item1 = InventoryItem("Widget", 10, 5)
     print(item1.name)
+    print(item1.total_cost())
 
