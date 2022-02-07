@@ -1,3 +1,5 @@
+from dataclasses import dataclass
+
 
 class InventoryItem:
     """
@@ -12,8 +14,27 @@ class InventoryItem:
     def total_cost(self) -> float:
         return self.unit_price * self.quantity_on_hand
 
+
+
+@dataclass
+class Student:
+    name: str
+    major: str
+    gpa: float
+
+    def on_honor_roll(self) -> bool:
+        if self.gpa >= 3.5:
+            return True
+        else:
+            return False
+
 if __name__ == "__main__":
     item1 = InventoryItem("Widget", 10, 5)
+    student = Student("John", "Math", 3.5)
     print(item1.name)
     print(item1.total_cost())
+
+    
+
+
 
