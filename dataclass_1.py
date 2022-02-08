@@ -6,6 +6,7 @@ class InventoryItem:
     Class for keeping track of an item in inventory.
     will be refactored to use dataclasses.
     """
+
     def __init__(self, name: str, unit_price: float, quantity_on_hand: int = 0) -> None:
         self.name = name
         self.unit_price = unit_price
@@ -33,8 +34,3 @@ if __name__ == "__main__":
     student = Student("John", "Math", 3.5)
     print(item1.name)
     print(item1.total_cost())
-
-    
-
-
-

@@ -11,6 +11,7 @@ pydantic = "^1.8.2"
 mypy = "^0.910"
 Pillow = "^8.4.0"
 isort = "^5.10.1"
+black = "^22.1.0"
 
 [tool.poetry.dev-dependencies]
 black = {version = "^22.1.0", allow-prereleases = true}
