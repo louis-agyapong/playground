@@ -15,7 +15,6 @@ class InventoryItem:
         return self.unit_price * self.quantity_on_hand
 
 
-
 @dataclass
 class Student:
     name: str
@@ -27,6 +26,7 @@ class Student:
             return True
         else:
             return False
+
 
 if __name__ == "__main__":
     item1 = InventoryItem("Widget", 10, 5)
