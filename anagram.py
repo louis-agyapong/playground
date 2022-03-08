@@ -9,9 +9,7 @@ def check_for_anagram(word1, word2):
     """
     Checks if word2 is an anagram of word1.
     """
-    word1 = word1.lower()
-    word2 = word2.lower()
-    return sorted(word1) == sorted(word2)
+    return sorted(word1.lower()) == sorted(word2.lower())
 
 
 print(check_for_anagram("python", "typhona"))
