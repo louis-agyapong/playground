@@ -29,6 +29,13 @@ class Student:
             return False
 
 
+"""
+Create a small application that asks the users to type in
+a word and check the users word against a list of existing
+words.
+"""
+
+
 if __name__ == "__main__":
     item1 = InventoryItem("Widget", 10, 5)
     student = Student("John", "Math", 3.5)

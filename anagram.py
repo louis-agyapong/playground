@@ -22,4 +22,8 @@ def check_for_anagram(word1, word2):
 
 
 if __name__ == "__main__":
-    print(check_for_anagram("adobe", "abode"))
+    user_input = input("Enter a word: ")
+    library = ["python", "typhon", "anagram", "nag a ram", "brainy", "adobe", "abode", "sunny", "windy"]
+    for word in library:
+        if sorted(user_input.replace(" ", "")) == sorted(word.replace(" ", "")):
+            print(word)
