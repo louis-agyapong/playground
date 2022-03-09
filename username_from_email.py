@@ -1,4 +1,4 @@
-def get_usernames_from_email(emails):
+def get_usernames_from_email(emails) -> list:
     """
     Return usernames from multiple email addresses.
     """
@@ -7,6 +7,7 @@ def get_usernames_from_email(emails):
 
 if __name__ == "__main__":
     email = "agyapong.louis@gmail.com"
+    print(email.split("@")[0])
     emails = [
         "user@org.com",
         "agyapong.louis@gmail.com",
