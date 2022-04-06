@@ -28,4 +28,4 @@ class Samoyed(Dog):
 
 if __name__ == "__main__":
     sam = Samoyed("Sam", 2, True)
-    print(sam.likes_walks())
+    print(sam.name, sam.age, sam.friendliness, sam.likes_walks())
